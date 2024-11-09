@@ -18,6 +18,66 @@
     
 // })
 
+document.addEventListener("DOMContentLoaded", () => {
+    const detectButton = document.getElementById("detect-button");
+    const loginLink = document.querySelector(".navbar-links li a[href='/user/login']");
+    const logoutDropdown = document.getElementById("logout-dropdown");
+    const logoutButton = document.getElementById("logout-button");
+
+    fetch("/api/login-status")
+        .then(response => response.json())
+        .then(data => {
+            if (data.isLoggedIn) {
+                detectButton.textContent = "Detect Now";
+                loginLink.textContent = data.email +" - "+ "logout";
+                loginLink.href = "/"; 
+                loginLink.addEventListener("click",()=>{
+                    const userConfirmed = confirm("Are you sure you want to log out?");
+    
+                    if (userConfirmed) {
+                        // Proceed with logout if user clicks "OK"
+                        fetch("/user/logout", { method: "POST" })
+                            .then(response => response.json())
+                            .then(data => {
+                                alert(data.message); // Notify user of successful logout
+                                // Update UI after logout
+                                loginLink.textContent = "Login";
+                                loginLink.href = "/user/login";
+                                detectButton.textContent = "Get Started";
+                                logoutDropdown.style.display = "none"; // Hide dropdown
+                            })
+                            .catch(error => console.error("Error logging out:", error));
+                    }
+                })
+            }  else {
+                detectButton.textContent = "Get Started";
+                loginLink.textContent = "Login";
+                loginLink.href = "/user/login"; // Show Login link for non-logged-in users
+            }
+        })
+        .catch(error => console.error("Error fetching login status:", error));
+
+        // loginLink.addEventListener("click", (event) => {
+        //     event.preventDefault();
+        //     logoutDropdown.style.display = logoutDropdown.style.display === "none" ? "block" : "none";
+        // });
+
+        // logoutButton.addEventListener("click", () => {
+        //     fetch("/api/logout", { method: "POST" })
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             alert(data.message); // Notify user of successful logout
+        //             // Update UI after logout
+        //             loginLink.textContent = "Login";
+        //             loginLink.href = "/user/login";
+        //             detectButton.textContent = "Get Started";
+        //             logoutDropdown.style.display = "none"; // Hide dropdown
+        //         })
+        //         .catch(error => console.error("Error logging out:", error));
+        // });
+});
+
+
 document.querySelector('.detect-btn').addEventListener('click', () => {
     alert('Plant detection coming soon!');
 });

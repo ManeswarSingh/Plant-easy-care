@@ -13,6 +13,38 @@ body {
     color: #333;
     overflow-x: hidden;
 }
+
+/* css for log out dropdown */
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdown-content button {
+    border: none;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#logout-dropdown {
+    display: none; /* Hidden by default */
+}
+
+.user-menu:hover #logout-dropdown {
+    display: block; /* Show on hover */
+}
+
 /* .header{
     height: 100 vh;
 } */
