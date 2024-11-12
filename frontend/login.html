@@ -11,7 +11,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
+    background-color: #D6EFD8;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -66,13 +66,13 @@ h2 {
 }
 
 .input-group input:focus {
-    border-color: #007bff;
+    border-color: #a67b5b;
     outline: none;
 }
 
 /* Styling for the submit button */
 button {
-    background-color: #007bff;
+    background-color: #a67b5b;
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -83,7 +83,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #8e6a4e;
 }
 
 /* Optional: Style the form fields for better appearance */
@@ -99,6 +99,10 @@ input[type="password"] {
         padding: 20px;
         max-width: 90%;
     }
+}
+
+.newuser{
+    margin-bottom: 10px;
 }
 
     </style>
@@ -118,6 +122,9 @@ input[type="password"] {
                 <div class="input-group">
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
+                </div>
+                <div class="newuser">
+                    New User? <a href="/user/register">Register instead</a>
                 </div>
 
                 <button type="submit">Log in</button>

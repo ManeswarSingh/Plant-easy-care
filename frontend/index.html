@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="Plant.png" type="image/x-icon">
     <title>Plant Easy Care</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar-brand">
-                <h2>Plant Easy Care</h2>
+            <img id="logo" src="Plant-removebg-preview.png" alt="">
+                <!-- <h2>Plant Easy Care</h2> -->
             </div>
+            
             <ul class="navbar-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="/user/login">Login</a></li>
@@ -22,44 +25,69 @@
                 <li><a href="#contact-info">Contacts</a></li>
             </ul>
         </nav>
-        <div id="leaves">
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-        
+       
         <header>
-            <!-- <img src="bannerleft.png" alt="" class="bannerleft">
-            <img src="bannerright.png" alt="" class="bannerright"> -->
             <div class="banner">
                 <h1>Plant Easy Care</h1>
-                <!-- <div id="test">test</div> -->
                 <h3>Detect your plant's disease with the power of AI</h3>
                 <button id="detect-button" class="detect-btn">Get Started</button>
             </div>
         </header>
     </div>
-
+    
+    <section id="services" class="services our-services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <!-- <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button> -->
+            <div class="services-cards">
+                <div class="service-card">
+                    <img src="image.png" alt="Service 1">
+                    <p>Plant Disease Detection</p>
+                </div>
+                <div class="service-card">
+                    <img src="image2.jpeg" alt="Service 2">
+                    <p>Gardening Tips</p>
+                </div>
+                <div class="service-card">
+                    <img src="images3.jpeg" alt="Service 3">
+                    <p>Plant Nutrition Guides</p>
+                </div>
+                <div class="service-card">
+                    <img src="service3.jpg" alt="Service 3">
+                    <p>Plant Nutrition Guides</p>
+                </div>
+                <div class="service-card">
+                    <img src="service3.jpg" alt="Service 3">
+                    <p>Plant Nutrition Guides</p>
+                </div>
+                <div class="service-card">
+                    <img src="service3.jpg" alt="Service 3">
+                    <p>Plant Nutrition Guides</p>
+                </div>
+                <div class="service-card">
+                    <img src="service3.jpg" alt="Service 3">
+                    <p>Plant Nutrition Guides</p>
+                </div>
+                <div class="service-card">
+                    <img src="service3.jpg" alt="Service 3">
+                    <p>Plant Nutrition Guides</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+            <!-- <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button> -->
+        </div>
+    </section>
     <section id="about" class="about-us">
         <h2>About Us</h2>
         <p>Welcome to Plant Easy, an innovative project aimed at transforming how we detect and prevent plant diseases. Our goal is to develop an efficient and automated plant disease detection system using advanced Machine Learning techniques. By leveraging TensorFlow and Convolutional Neural Networks (CNNs), we can accurately identify a wide range of plant diseases from leaf images.
-
+            
             Our model is trained on a robust dataset sourced from Kaggle, which includes numerous plant species and their associated diseases. Plant Easy demonstrates the power of machine learning in modernizing plantation practices, making disease detection tools more accessible and effective.
             
             Through our system, we are committed to improving plant health, enhancing food security, and promoting sustainable agricultural practices for a better future.</p>
     </section>
 
+
+    
     <footer>
         <div class="contact-info">
             <h3>Connect with us</h3>
@@ -70,7 +98,7 @@
                 </div>
                 <div class="social-media">
                     <p><strong>Social Media</strong></p>
-                    <p>Facebook<br>Instagram<br>Twitter</p>
+                    <p>Facebook<br>Instagram</p>
                 </div>
             </div>
             <p class="email">deepanshudrona@gmail.com</p>
