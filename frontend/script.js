@@ -131,6 +131,15 @@ document.addEventListener('DOMContentLoaded', function() {
 //     fadeInOnScroll(); // Check visibility on page load in case it's already in view
 // });
 
+function scrollLeft() {
+    const container = document.querySelector('.services-cards');
+    container.scrollBy({ left: -250, behavior: 'smooth' });
+}
+
+function scrollRight() {
+    const container = document.querySelector('.services-cards');
+    container.scrollBy({ left: 250, behavior: 'smooth' });
+}
 
 
 
