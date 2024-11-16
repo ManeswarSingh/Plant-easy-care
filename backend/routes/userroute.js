@@ -32,7 +32,7 @@ router.post("/register", async (req, res) => {
         
         await newUser.save();
         
-        res.send("Registration successful!");
+        res.redirect('/');
     } catch (error) {
         console.error(error);
         res.status(500).send("Error registering user.");
