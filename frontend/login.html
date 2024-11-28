@@ -111,7 +111,7 @@ input[type="password"] {
     <div class="container">
         <div class="form-container">
             <h2>Log in using registered account</h2>
-            <form action="/user/login" method="POST">
+            <form id="loginForm" action="/user/login" method="POST">
                 
 
                 <div class="input-group">
@@ -132,4 +132,33 @@ input[type="password"] {
         </div>
     </div>
 </body>
+<!-- <script>
+    const loginForm = document.getElementById('loginForm');
+
+loginForm.addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    const formData = new FormData(loginForm);
+    const formObject = Object.fromEntries(formData.entries());
+
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formObject),
+        });
+
+        if (!response.ok) {
+            const data = await response.json();
+            alert(data.error); // Show error message
+        } else {
+            window.location.href = '/'; // Redirect on success
+        }
+    } catch (err) {
+        console.error('Error:', err);
+        alert('Incorrect email or password');
+    }
+});
+
+</script> -->
 </html>

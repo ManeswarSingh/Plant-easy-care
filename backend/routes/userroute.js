@@ -48,7 +48,7 @@ router.post('/login',async (req,res)=>{
        res.cookie('token',token).redirect('/')
      } catch (error) {
         console.log(error)
-        res.status(500).send("Error in authenticating user")
+        res.status(401).json({ error: "Incorrect email or password" });
         
      }
 })

@@ -53,3 +53,19 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = '/user/register';
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.about-us, .our-services');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Add 'visible' when in view
+            } else {
+                entry.target.classList.remove('visible'); // Remove 'visible' when out of view
+            }
+        });
+    }, { threshold: 0.5 }); // Adjust threshold if needed
+
+    sections.forEach(section => observer.observe(section)); // Observe both sections
+});
